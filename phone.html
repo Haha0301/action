@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+			width: 300px;
+			height: 100px;
+			border: 3px solid black;
+			font-size: 20px;
+			text-align: center;
+			line-height: 100px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -150px;
+			margin-top: -50px
+		}
+	</style>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded',function () {
+			var oDiv = document.getElementsByTagName('div')[0];
+			oDiv.addEventListener('touchstart',function () {
+				oDiv.innerHTML = '我现在不能答复你'
+			},false);
+			oDiv.addEventListener('touchend',function () {
+				oDiv.innerHTML = '';
+				oDiv.style.border = 'white';
+				oDiv.style.background = 'url(timg.jpg) no-repeat';
+				oDiv.style.height = '300px';
+				// var oImg = new Image();
+				// oImg.src = 'timg.jpg';
+				// document.body.appendChild(oImg)
+			},false);
+		},false)
+	</script>
+</head>
+<body>
+	<div>你周五晚上有空么</div>
+</body>
+</html>
